@@ -5,7 +5,7 @@ CREATE DATABASE IF NOT EXISTS hbnb_test_db;
 
 -- New user hbnb_test
 CREATE USER IF NOT EXISTS 'hbnb_test'@'localhost'
-IDENTIFIES BY 'hbnb_test_pwd';
+IDENTIFIED BY 'hbnb_test_pwd';
 
 -- grant hbnb_dev all privilege on hbnb_test_db
 GRANT ALL PRIVILEGES ON hbnb_test_db.*
