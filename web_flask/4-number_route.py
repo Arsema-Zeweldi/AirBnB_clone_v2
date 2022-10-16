@@ -33,7 +33,7 @@ def python_route(text="is cool"):
 
 
 @app.route("/number/<n>", strict_slashes=False)
-def number(n):
+def number_route(n):
     """n is a number"""
     try:
         n = int(n)
