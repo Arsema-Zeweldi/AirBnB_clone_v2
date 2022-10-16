@@ -2,7 +2,7 @@
 """
 Flask
 """
-from flask import Flask, abort
+from flask import Flask
 from flask import render_template
 
 app = Flask(__name__)
@@ -33,14 +33,10 @@ def python_route(text="is cool"):
     return "Python {}".format(text.replace("_", " "))
 
 
-@app.route("/number/<n>", strict_slashes=False)
+@app.route("/number/<int:n>", strict_slashes=False)
 def number_route(n):
     """n is a number"""
-    try:
-        n = int(n)
-        return "{} is a number".format(n)
-    except:
-        abort(404)
+    return "{} is a number".format(n)
 
 @app.route("/number_template/<n>", strict_slashes=False)
 def number_template(n):
