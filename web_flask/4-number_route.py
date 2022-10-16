@@ -32,7 +32,7 @@ def python_route(text="is cool"):
     return "Python {}".format(text.replace("_", " "))
 
 
-@app.route("/number/<n>")
+@app.route("/number/<n>", stricr_slashes=False)
 def number(n):
     """n is a number"""
     try:
