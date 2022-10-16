@@ -36,10 +36,10 @@ def python_route(text="is cool"):
 def number(n):
     """n is a number"""
     try:
-	n = int(n)
-	return "{} is a number".format(n)
+        n = int(n)
+        return "{} is a number".format(n)
     except:
-	abort(404)
+        abort(404)
 
 
 if __name__ == "__main__":
